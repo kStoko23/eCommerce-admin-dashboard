@@ -26,7 +26,6 @@ python generator.py
 ### Module Imports
 
 ```python
-
 import random
 from faker import Faker
 from sqlalchemy import create_engine, Table, Column, Integer, String, Numeric, Date, MetaData, ForeignKey, Enum
@@ -63,7 +62,6 @@ This section sets up the connection to the PostgreSQL database using SQLAlchemy 
 ### Category Model
 
 ```python
-
 class Category(Base):
     __tablename__ = 'category'
     id = Column(Integer, primary_key=True)
@@ -78,7 +76,6 @@ Represents a product category with attributes:
 ### SubCategory Model
 
 ```python
-
 class SubCategory(Base):
     __tablename__ = 'subcategory'
     id = Column(Integer, primary_key=True)
@@ -96,7 +93,6 @@ Represents a product subcategory with attributes:
 ### Product Model
 
 ```python
-
 class Product(Base):
     __tablename__ = 'products'
     id = Column(Integer, primary_key=True)
@@ -116,7 +112,6 @@ Represents a product with attributes:
 ### Customer Model
 
 ```python
-
 class Customer(Base):
     __tablename__ = 'customers'
     id = Column(Integer, primary_key=True)
@@ -131,7 +126,6 @@ Represents a customer with attributes:
 ### Region Model
 
 ```python
-
 class Region(Base):
     __tablename__ = 'region'
     id = Column(Integer, primary_key=True)
@@ -146,7 +140,6 @@ Represents a geographic region with attributes:
 ### State Model
 
 ```python
-
 class State(Base):
     __tablename__ = 'state'
     id = Column(Integer, primary_key=True)
@@ -164,7 +157,6 @@ Represents a state within a region with attributes:
 ### City Model
 
 ```python
-
 class City(Base):
     __tablename__ = 'city'
     id = Column(Integer, primary_key=True)
@@ -182,7 +174,6 @@ Represents a city within a state with attributes:
 ### Order Model
 
 ```python
-
 class Order(Base):
     __tablename__ = 'orders'
     id = Column(Integer, primary_key=True)
@@ -221,7 +212,6 @@ Represents an order with attributes:
 ### Relationships
 
 ```python
-
 Category.subcategories = relationship("SubCategory", order_by=SubCategory.id, back_populates="category")
 SubCategory.products = relationship("Product", order_by=Product.id, back_populates="subcategory")
 Region.states = relationship("State", order_by=State.id, back_populates="region")
@@ -233,7 +223,6 @@ Defines relationships between models.
 ### Create Tables in the Database
 
 ```python
-
 Base.metadata.create_all(engine)
 ```
 
@@ -244,7 +233,6 @@ Creates tables in the database based on the defined models.
 ### Category Data
 
 ```python
-
 category_data = {
     'Computers': ['Laptops', 'Desktops', 'Components', 'Peripherals'],
     'Phones': ['Smartphones', 'Landline Phones', 'Phone Accessories'],
@@ -261,7 +249,6 @@ Defines categories and their respective subcategories.
 ### Product Data
 
 ```python
-
 product_data = {
     'Laptops': ['Dell XPS 13', 'MacBook Pro', 'HP Spectre x360', 'Lenovo ThinkPad'],
     'Desktops': ['iMac', 'HP Pavilion', 'Dell Inspiron', 'Acer Aspire'],
@@ -295,7 +282,6 @@ Defines products for each subcategory.
 ### Generate Categories
 
 ```python
-
 def generate_categories():
     return [Category(name=category) for category in category_data.keys()]
 ```
@@ -305,7 +291,6 @@ Generates category data.
 ### Generate Subcategories
 
 ```python
-
 def generate_subcategories(categories):
     subcategories_data = []
     for category in categories:
@@ -319,7 +304,6 @@ Generates subcategory data.
 ### Generate Products
 
 ```python
-
 def generate_products(subcategories):
     products_data = []
     for subcategory in subcategories:
@@ -333,7 +317,6 @@ Generates product data.
 ### Generate Customers
 
 ```python
-
 def generate_customers(n=6500):
     return [Customer(name=fake.name()) for _ in range(n)]
 ```
@@ -343,7 +326,6 @@ Generates customer data.
 ### Generate Regions
 
 ```python
-
 def generate_regions():
     return [Region(name=region) for region in ['Northeast', 'Midwest', 'South', 'West']]
 ```
@@ -353,7 +335,6 @@ Generates region data.
 ### Generate States
 
 ```python
-
 def generate_states(regions):
     states = {
         'Northeast': ['Maine', 'New Hampshire', 'Vermont', 'Massachusetts', 'Rhode Island', 'Connecticut', 'New York', 'New Jersey', 'Pennsylvania'],
@@ -372,7 +353,6 @@ Generates state data.
 ### Generate Cities
 
 ```python
-
 def generate_cities(states):
     return [City(name=fake.city(), state=state) for state in states]
 ```
@@ -382,7 +362,6 @@ Generates city data.
 ### Generate Orders
 
 ```python
-
 def generate_orders(customers, products, cities, states, n=10000):
     orders_data = []
     for _ in range(n):
@@ -424,7 +403,6 @@ Generates order data.
 ### Generate Data
 
 ```python
-
 categories_data = generate_categories()
 subcategories_data = generate_subcategories(categories_data)
 products_data = generate_products(subcategories_data)
@@ -439,7 +417,6 @@ Calls the data generation functions to create the data.
 Insert Data into Database
 
 ```python
-
 def insert_data(session, data):
     session.add_all(data)
     session.commit()
@@ -448,7 +425,6 @@ def insert_data(session, data):
 Defines a function to insert data into the database.
 
 ```python
-
 Session = sessionmaker(bind=engine)
 session = Session()
 
