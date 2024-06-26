@@ -1,0 +1,11 @@
+# .gitignore in the root directory
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
