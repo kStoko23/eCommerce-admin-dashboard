@@ -1,1 +1,1 @@
-# eCommerce-admin-dashboard
+# Mock eCommerce Admin Dashboard
