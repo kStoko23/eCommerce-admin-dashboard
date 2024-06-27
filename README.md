@@ -3,11 +3,11 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
 ![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
-![React](https://shields.io/badge/react-black?logo=react&style=for-the-badge)
+![Angular](https://img.shields.io/badge/angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![Typescript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/tailwindcss-0F172A?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8)
 
-This is my portfolio project, which aims to mock real E-commerce shop data and provide a user-friendly web app to serve it. Built using Python with Django, PostgreSQL, React and Tailwind.css. It is my first time building a project with Django and React, both in tandem and stand-alone.
+This is my portfolio project, which aims to mock real E-commerce shop data and provide a user-friendly web app to serve it. Built using Python with Django, PostgreSQL, Angular and Tailwind.css. It is my first time building a project with Django and Angular, both in tandem and stand-alone.
 
 ## Table of Contents
 
@@ -32,7 +32,7 @@ I decided to use Python with Django for my backend, without any particular reaso
 
 For the database I chose PostgreSQL, since I feel pretty good with relational databases and it's open source.
 
-On the frontend I opted for React - again I want to learn new stuff, it being very popular is another plus.
+On the frontend I opted for Agnular - again I want to learn new stuff, it being very popular is another plus.
 
 Went with Typescript, since I mainly used strongly typed languages and feel better using them.
 

@@ -16,12 +16,12 @@
 
 ## Frontend
 
-- [ ] Set up React project
+- [ ] Set up Angular project
 - [ ] Configure Tailwind CSS for styling
 - [ ] Create basic components (Header, Footer, Sidebar, etc.)
 - [ ] Create pages for listing products, categories, and orders
 - [ ] Implement forms for creating and updating data
-- [ ] Set up state management (using Redux or Context API)
+- [ ] Set up state management
 - [ ] Implement authentication and authorization in the frontend
 - [ ] Integrate frontend with backend API
 - [ ] Add responsive design and mobile-friendly views
@@ -36,13 +36,12 @@
 - [ ] Set up Docker Compose for local development
 - [ ] Configure CI/CD pipeline (GitHub Actions)
 - [ ] Set up automated tests and linting
-- [ ] Deploy backend either local server to a cloud provider (e.g., AWS, Heroku, DigitalOcean)
-- [ ] Deploy frontend either local server to a cloud provider (e.g., Vercel, Netlify)
+- [ ] Deploy backend and frontend to either local server or a cloud provider
 
 ## Testing
 
 - [ ] Write unit tests for Django models, views, and serializers
-- [ ] Write unit tests for React components
+- [ ] Write unit tests for Angular components
 - [ ] Write integration tests for frontend-backend communication
 - [ ] Perform end-to-end testing (using Cypress or Selenium)
 - [ ] Set up automated testing in CI/CD pipeline
