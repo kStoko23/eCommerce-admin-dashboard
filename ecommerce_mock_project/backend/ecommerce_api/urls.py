@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from ecommerce_api.views import CategoryViewSet, CityViewSet, CustomerViewSet, OrderViewSet, ProductViewSet, StateViewSet, SubCategoryViewSet
+from ecommerce_api.views import *
 
 router = DefaultRouter()
 router.register(r'customers', CustomerViewSet)
@@ -14,4 +14,5 @@ router.register(r'subcategories', SubCategoryViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('popular-products/', PopularProductsView.as_view(), name='popular-products')
 ]
