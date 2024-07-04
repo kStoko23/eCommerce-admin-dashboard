@@ -1,30 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  ngOnInit() {
-    this.addMenuToggleListener();
-  }
+  isOpen = false;
 
-  addMenuToggleListener() {
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeBtn = document.getElementById('menu-close-btn');
-
-    if (menuBtn && mobileMenu && closeBtn) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-      });
-
-      closeBtn.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    }
+  toggleMenu() {
+    this.isOpen = !this.isOpen;
   }
 }
