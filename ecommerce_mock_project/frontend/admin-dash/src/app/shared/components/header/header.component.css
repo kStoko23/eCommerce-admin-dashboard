@@ -14,6 +14,7 @@
 #nav-icon3 span {
   display: block;
   position: absolute;
+  border-radius: 50px;
   height: 3px;
   width: 100%;
   background: #fff;
@@ -67,4 +68,15 @@
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+.link {
+  position: relative; /* Ensure this has a stacking context */
+}
+
+.link-black {
+  background-color: var(--black);
+}
+.link-accent {
+  background-color: var(--accent);
 }

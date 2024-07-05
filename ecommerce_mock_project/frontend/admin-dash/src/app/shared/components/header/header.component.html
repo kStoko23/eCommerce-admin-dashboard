@@ -72,12 +72,21 @@
       >
     </div>
     <div
-      class="hidden lg:flex items-center lg:space-x-12 xl:space-x-24 text-white text-md xl:text-xl bg-[#212121] rounded-full pr-2"
+      class="relative hidden lg:flex items-center text-white text-md xl:text-xl bg-[#212121] rounded-full"
     >
+      <div
+        class="absolute bg-black h-4/5 rounded-full transition-all ease-in-out duration-500"
+        [style.width]="activeLinkWidth"
+        [style.left]="activeLinkOffset"
+        [style.display]="displayBackground ? 'block' : 'none'"
+        [ngStyle]="{ 'transition-property': 'left, width' }"
+      ></div>
+
       <a
-        class="flex items-center space-x-2 hover:bg-accent hover:text-black rounded-full m-2 p-2 hover:transition-all ease-in-out duration-500"
+        #links
+        class="link flex items-center space-x-2 hover:bg-accent hover:text-black duration-500 rounded-full my-2 mr-4 lg:mr-8 ml-2 p-2"
         routerLink="/dashboard"
-        routerLinkActive="bg-black"
+        (click)="setActiveLink($event)"
       >
         <img
           src="/../../assets/icons/dashboard.svg"
@@ -87,17 +96,19 @@
         <span>Dashboard</span>
       </a>
       <a
-        class="flex items-center space-x-2 hover:bg-accent hover:text-black rounded-full m-2 p-2 hover:transition-all ease-in-out duration-500"
+        #links
+        class="link flex items-center space-x-2 hover:bg-accent hover:text-black duration-500 rounded-full my-2 mx-4 lg:mx-8 p-2"
         routerLink="/sales"
-        routerLinkActive="bg-black"
+        (click)="setActiveLink($event)"
       >
         <img src="/../../assets/icons/sales.svg" alt="Sales" class="h-8" />
         <span>Sales</span>
       </a>
       <a
-        class="flex items-center space-x-2 hover:bg-accent hover:text-black rounded-full m-2 p-2 hover:transition-all ease-in-out duration-500"
+        #links
+        class="link flex items-center space-x-2 hover:bg-accent hover:text-black duration-500 rounded-full my-2 mx-4 lg:mx-8 p-2"
         routerLink="/products"
-        routerLinkActive="bg-black"
+        (click)="setActiveLink($event)"
       >
         <img
           src="/../../assets/icons/products.svg"
@@ -107,9 +118,10 @@
         <span>Products</span>
       </a>
       <a
-        class="flex items-center space-x-2 hover:bg-accent hover:text-black rounded-full m-2 p-2 hover:transition-all ease-in-out duration-500"
+        #links
+        class="link flex items-center space-x-2 hover:bg-accent hover:text-black duration-500 rounded-full my-2 ml-4 lg:ml-8 mr-2 p-2"
         routerLink="/customers"
-        routerLinkActive="bg-black"
+        (click)="setActiveLink($event)"
       >
         <img
           src="/../../assets/icons/customers.svg"
@@ -141,7 +153,7 @@
       </a>
       <a
         class="bg-black rounded-full p-2 hover:bg-accent hover:transition-all ease-in-out duration-500"
-        routerLink="/Profile"
+        routerLink="/profile"
         routerLinkActive="bg-accent"
       >
         <img src="/../../assets/icons/profile.svg" alt="Profile" class="h-8" />
