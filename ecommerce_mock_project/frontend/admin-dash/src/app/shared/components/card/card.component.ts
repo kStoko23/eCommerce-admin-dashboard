@@ -10,15 +10,18 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   /*
-   * Inputs for background and height classes, since default card doesn't
+   * Inputs for background, height, text color classes, since default card doesn't
    * specify those for the sake of modularity
    */
-  @Input() backgroundClass: string = '';
-  @Input() height: string = '';
-  @Input() opacity: boolean = true;
+  @Input() backgroundClass: string = 'bg-[rgba(67,_67,_67,_0.2)]';
+  @Input() height: string = 'h-1/2 lg:h-full';
   @Input() textColor: string = 'text-white';
 
   getCombinedClasses() {
-    return { [this.backgroundClass]: true, 'opacity-20': this.opacity };
+    return {
+      [this.backgroundClass]: true,
+      [this.height]: true,
+      [this.textColor]: true,
+    };
   }
 }
