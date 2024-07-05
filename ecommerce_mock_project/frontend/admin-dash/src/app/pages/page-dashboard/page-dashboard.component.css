@@ -1,0 +1,25 @@
+.parent {
+  @apply lg:grid lg:grid-cols-[repeat(6,_1fr)] lg:grid-rows-[repeat(5,_1fr)] lg:gap-x-[24px] lg:gap-y-[24px];
+}
+
+.card1 {
+  @apply [grid-area:1_/_1_/_3_/_4];
+}
+.card2 {
+  @apply [grid-area:3_/_1_/_5_/_4];
+}
+.card3 {
+  @apply [grid-area:4_/_4_/_5_/_5];
+}
+.card4 {
+  @apply [grid-area:4_/_5_/_5_/_6];
+}
+.card5 {
+  @apply [grid-area:4_/_6_/_5_/_7];
+}
+.card6 {
+  @apply [grid-area:1_/_4_/_4_/_7];
+}
+.card7 {
+  @apply [grid-area:5_/_1_/_6_/_7];
+}
