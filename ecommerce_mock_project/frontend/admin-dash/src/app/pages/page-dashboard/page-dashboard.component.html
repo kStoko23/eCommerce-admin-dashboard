@@ -7,19 +7,49 @@
   </app-card>
   <app-card
     class="card3"
-    [height]="'h-1/5 lg:h-full'"
+    [height]="'h-24 lg:h-full'"
     [backgroundClass]="'bg-primary'"
     [textColor]="'text-black'"
   >
-    <p>TEST</p>
+    <a
+      routerLink="/sales"
+      class="flex flex-col items-center justify-center p-4 w-full h-full rounded-[40px] hover:bg-primaryShade-200 duration-500 ease-in-out"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="/../../assets/icons/total_orders.svg"
+          alt="Orders icon"
+          class="h-12 w-12 lg:h-16 lg:w-16"
+        />
+        <p class="text-xl xl:text-2xl">Total orders</p>
+      </div>
+      <p class="text-2xl xl:text-4xl font-bold">
+        {{ totalOrders | number : "1.0-0" }}
+      </p>
+    </a>
   </app-card>
   <app-card
     class="card4"
-    [height]="'h-1/5 lg:h-full'"
+    [height]="'h-24 lg:h-full'"
     [backgroundClass]="'bg-primary'"
     [textColor]="'text-black'"
   >
-    <p>TEST</p>
+    <a
+      routerLink="/customers"
+      class="flex flex-col items-center justify-center p-4 w-full h-full rounded-[40px] hover:bg-primaryShade-200 duration-500 ease-in-out"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="/../../assets/icons/total_customers.svg"
+          alt="Orders icon"
+          class="h-12 w-12 lg:h-16 lg:w-16"
+        />
+        <p class="text-xl xl:text-2xl">Total customers</p>
+      </div>
+      <p class="text-2xl xl:text-4xl font-bold">
+        {{ totalCustomers | number : "1.0-0" }}
+      </p>
+    </a>
   </app-card>
   <app-card class="card5">
     <p>TEST</p>
