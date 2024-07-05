@@ -48,7 +48,7 @@ export class HeaderComponent {
     setTimeout(() => {
       const defaultLink = this.links.first.nativeElement;
       this.updateActiveLink(defaultLink);
-    }, 50);
+    }, 100);
   }
 
   /* Method to set the active link based on a mouse event
