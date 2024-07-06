@@ -16,9 +16,9 @@
 
 ## Frontend
 
-- [ ] Set up Angular project
-- [ ] Configure Tailwind CSS for styling
-- [ ] Create basic components (Header, Footer, Sidebar, etc.)
+- [x] Set up Angular project
+- [x] Configure Tailwind CSS for styling
+- [x] Create basic components (Header, Footer, Sidebar, etc.)
 - [ ] Create pages for listing products, categories, and orders
 - [ ] Implement forms for creating and updating data
 - [ ] Set up state management
@@ -28,24 +28,11 @@
 - [ ] Implement sorting, filtering, and searching on the frontend
 - [ ] Add unit and integration tests for components
 
-## DevOps
-
-- [ ] Set up environment variables for secure configurations
-- [ ] Create Dockerfile for backend
-- [ ] Create Dockerfile for frontend
-- [ ] Set up Docker Compose for local development
-- [ ] Configure CI/CD pipeline (GitHub Actions)
-- [ ] Set up automated tests and linting
-- [ ] Deploy backend and frontend to either local server or a cloud provider
-
 ## Testing
 
 - [ ] Write unit tests for Django models, views, and serializers
 - [ ] Write unit tests for Angular components
 - [ ] Write integration tests for frontend-backend communication
-- [ ] Perform end-to-end testing (using Cypress or Selenium)
-- [ ] Set up automated testing in CI/CD pipeline
-- [ ] Conduct performance testing (e.g., using Locust or JMeter)
 
 ## Documentation
 

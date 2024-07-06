@@ -1,10 +1,23 @@
 <div class="parent h-screen p-8">
   <app-card class="card1">
-    <p>TEST1</p>
+    <div class="flex flex-col justify-between items-center h-full p-8">
+      <div class="flex justify-between w-full">
+        <h3 class="font-bold text-2xl">Sales overview</h3>
+        <a class="text-accent" routerLink="/sales">View all</a>
+      </div>
+    </div>
   </app-card>
   <app-card class="card2">
-    <p>TEST2</p>
+    <div class="flex flex-col justify-between items-center h-full p-8">
+      <div class="flex justify-between w-full">
+        <h3 class="font-bold text-2xl">Categories map</h3>
+        <a class="text-accent" routerLink="/sales">View all</a>
+      </div>
+    </div>
   </app-card>
+
+  <!-- Total orders counter -->
+
   <app-card
     class="card3"
     [height]="'h-24 lg:h-full'"
@@ -28,6 +41,9 @@
       </p>
     </a>
   </app-card>
+
+  <!-- Total customers counter -->
+
   <app-card
     class="card4"
     [height]="'h-24 lg:h-full'"
@@ -52,7 +68,12 @@
     </a>
   </app-card>
   <app-card class="card5">
-    <p>TEST5</p>
+    <div class="flex flex-col justify-between items-center h-full p-8">
+      <div class="flex justify-between w-full">
+        <h3 class="font-bold text-2xl">Sales & profits</h3>
+        <a class="text-accent" routerLink="/sales">View all</a>
+      </div>
+    </div>
   </app-card>
 
   <!-- Tabel popular products -->

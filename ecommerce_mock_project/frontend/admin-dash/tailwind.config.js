@@ -24,6 +24,14 @@ module.exports = {
         950: "var(--primary-950)",
       },
     },
+    fontFamily: {
+      heading: "Nunito",
+      body: "Nunito",
+    },
+    fontWeight: {
+      normal: "400",
+      bold: "700",
+    },
   },
   plugins: [],
 };
