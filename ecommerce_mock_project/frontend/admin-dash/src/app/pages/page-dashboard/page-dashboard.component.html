@@ -21,10 +21,10 @@
           alt="Orders icon"
           class="h-12 w-12 lg:h-16 lg:w-16"
         />
-        <p class="text-xl xl:text-2xl">Total orders</p>
+        <p class="text-xl xl:text-2xl">Orders &#64;{{ currentYear }}</p>
       </div>
       <p class="text-2xl xl:text-4xl font-bold">
-        {{ totalOrders | number : "1.0-0" }}
+        #{{ totalOrders | number : "1.0-0" }}
       </p>
     </a>
   </app-card>
@@ -44,10 +44,10 @@
           alt="Orders icon"
           class="h-12 w-12 lg:h-16 lg:w-16"
         />
-        <p class="text-xl xl:text-2xl">Total customers</p>
+        <p class="text-xl xl:text-2xl">Customers &#64;{{ currentYear }}</p>
       </div>
       <p class="text-2xl xl:text-4xl font-bold">
-        {{ totalCustomers | number : "1.0-0" }}
+        #{{ totalCustomers | number : "1.0-0" }}
       </p>
     </a>
   </app-card>

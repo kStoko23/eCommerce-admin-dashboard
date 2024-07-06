@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CardComponent } from '../../shared/components/card/card.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { CustomersService } from '../../services/customers.service';
-import { OrdersService } from '../../services/orders.service';
+import { CustomersService } from '../../core/services/customers.service';
+import { OrdersService } from '../../core/services/orders.service';
 
 @Component({
   selector: 'app-page-dashboard',
@@ -15,6 +15,7 @@ import { OrdersService } from '../../services/orders.service';
 export class PageDashboardComponent {
   totalOrders: number;
   totalCustomers: number;
+  currentYear: number = new Date().getFullYear();
 
   constructor(
     private customerService: CustomersService,
