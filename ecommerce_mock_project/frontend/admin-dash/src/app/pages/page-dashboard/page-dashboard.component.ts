@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CustomersService } from '../../core/services/customers.service';
 import { OrdersService } from '../../core/services/orders.service';
+import { PopularProductsService } from '../../core/services/popular-products.service';
+import { PopularProduct } from '../../core/models/endpoint-specific/popular-product';
 
 @Component({
   selector: 'app-page-dashboard',
@@ -17,9 +19,12 @@ export class PageDashboardComponent {
   totalCustomers: number;
   currentYear: number = new Date().getFullYear();
 
+  popularProducts: PopularProduct[] = [];
+
   constructor(
     private customerService: CustomersService,
-    private ordersService: OrdersService
+    private ordersService: OrdersService,
+    private popularProductsService: PopularProductsService
   ) {}
 
   ngOnInit() {
@@ -37,6 +42,14 @@ export class PageDashboardComponent {
       },
       error: (error) => {
         console.error('Error fetching total customers', error);
+      },
+    });
+    this.popularProductsService.getPopularProducts().subscribe({
+      next: (data) => {
+        this.popularProducts = data;
+      },
+      error: (error) => {
+        console.error('Error fetching popular products', error);
       },
     });
   }

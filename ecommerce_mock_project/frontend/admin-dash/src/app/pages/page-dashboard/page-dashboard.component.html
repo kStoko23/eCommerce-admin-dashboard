@@ -1,9 +1,9 @@
 <div class="parent h-screen p-8">
   <app-card class="card1">
-    <p>TEST</p>
+    <p>TEST1</p>
   </app-card>
   <app-card class="card2">
-    <p>TEST</p>
+    <p>TEST2</p>
   </app-card>
   <app-card
     class="card3"
@@ -52,9 +52,52 @@
     </a>
   </app-card>
   <app-card class="card5">
-    <p>TEST</p>
+    <p>TEST5</p>
   </app-card>
-  <app-card class="card6">
-    <p>TEST</p>
+
+  <!-- Tabel popular products -->
+
+  <app-card class="card6 min-h-[330px]">
+    <div class="flex flex-col justify-between items-center h-full p-8">
+      <div class="flex justify-between w-full">
+        <h3 class="font-bold text-2xl">Popular products</h3>
+        <a class="text-accent" routerLink="/products">View all</a>
+      </div>
+      <table class="w-full h-full my-8">
+        <thead>
+          <tr class="opacity-20">
+            <th class="text-right pr-6 lg:pr-20 xl:pr-28 py-2"># Id</th>
+            <th class="text-right pr-6 lg:pr-20 xl:pr-28 py-2">Product name</th>
+            <th class="max-md:hidden text-right pr-6 lg:pr-20 xl:pr-28 py-2">
+              Category
+            </th>
+            <th class="text-right pr-6 lg:pr-20 xl:pr-28 py-2"># sold</th>
+            <th class="max-md:hidden text-right pr-6 lg:pr-20 xl:pr-28 py-2">
+              Profit
+            </th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr class="" *ngFor="let product of popularProducts">
+            <td class="text-right pr-6 lg:pr-20 xl:pr-28 py-4">
+              <span class="text-primary">#</span>{{ product.product_id }}
+            </td>
+            <td class="text-right pr-6 lg:pr-20 xl:pr-28 py-4">
+              {{ product.product_name }}
+            </td>
+            <td class="max-md:hidden text-right pr-6 lg:pr-20 xl:pr-28 py-4">
+              {{ product.category_name }}
+            </td>
+            <td class="text-right pr-6 lg:pr-20 xl:pr-28 py-4">
+              <span class="text-primary">#</span>{{ product.order_count }}
+            </td>
+            <td class="max-md:hidden text-right pr-6 lg:pr-20 xl:pr-28 py-4">
+              <span class="text-primary">$</span
+              >{{ product.total_profit | number }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </app-card>
 </div>
